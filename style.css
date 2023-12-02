@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap');
+*{
+    font-family: 'Work Sans', sans-serif;
+}
+.attribution{
+    display: none;
+    font-size: 11px;
+    text-align: center;
+}
+.attribution a{
+    color: hsl(228, 45%, 44%);
+}
+.hidden{
+    background-color: hsl(0, 0%, 100%);
+    /* padding: 1rem 2rem; */
+    max-width: 60ch;
+    display: none;
+    overflow: hidden;
+    transition: .2s ease-out;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 400px;
+    background-image: url(assets/images/background-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100%;
+    background-attachment: fixed;
+    background-color: hsl(275, 100%, 97%);
+}
+.wrapper{
+    display: block;
+    padding: 1.5rem;
+    color: hsl(292, 42%, 14%);
+    background-color: hsl(0, 0%, 100%);
+    max-width: 1000px;
+    min-height: 400px;
+    border-radius: 1rem;
+    box-shadow: 0px 30px 100px -50px black;
+}
+@media (max-width:750px){
+    body{
+        background-image: url(assets/images/background-pattern-mobile.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        min-width: 470px;
+    }
+    .wrapper{
+        min-width: 450px;
+        margin: 1rem;
+    }
+    .faq-dropdown{
+        gap: .5rem;
+    }
+    .questions h2{
+        max-width: 22ch;
+    }
+    .hidden{
+        max-width: 40ch;
+    }
+}
+.faq-title{
+    display: flex;
+    gap: 1.5rem;
+    padding-bottom: 1rem;
+}
+.faq-title h1{
+    font-size: 3.5rem;
+    font-weight: 900;
+    margin: 0;
+}
+.questions{
+    padding: 1rem 1rem;
+}
+.questions h2{
+    font-weight: 800;
+}
+.divider{
+    border-bottom: 1px solid hsla(292, 16%, 49%, .2);
+}
+.faq-dropdown{
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: space-between;
+    transition: .2s;
+}
+.faq-dropdown:hover{
+    color: hsl(281, 83%, 54%);
+}
+.active, .faq-dropdown:hover{
+    cursor: pointer;
+}
+.icon-plus{
+    display: block;
+    overflow: hidden;
+}
+.icon-minus{
+    display: none;
+    overflow: hidden;
+}
